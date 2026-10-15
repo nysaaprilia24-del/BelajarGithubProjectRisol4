@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risol Ngrami | Platform Penjualan Risol</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="navbar">
+        <a href="#" class="brand">Risol<span>Ngrami.</span></a>
+        <nav>
+            <button class="nav-link active" data-page="shop">Beranda</button>
+            <button class="nav-link" data-page="testimonials">Testimoni</button>
+            <button class="nav-link" data-page="admin">Dashboard Admin</button>
+        </nav>
+        <button class="cart-button" id="showCart">
+            Keranjang <span id="cartCount">0</span>
+        </button>
+    </header>
+
+    <main>
+        <!-- HALAMAN KONSUMEN -->
+        <section id="shop" class="page active">
+            <div class="hero">
+                <div>
+                    <p class="eyebrow">CAM﻿ILAN PILIHAN KELUARGA</p>
+                    <h1>Risol lezat untuk<br>teman setiap waktu.</h1>
+                    <p>Temukan risol favoritmu, pesan dengan mudah,
+                       lalu pilih diantar atau ambil sendiri.</p>
+                    <a href="#catalog" class="primary-button">Lihat Menu</a>
+                </div>
+                <div class="hero-art">🥟</div>
+            </div>
+
+            <section class="section" id="catalog">
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">MENU HARI INI</p>
+                        <h2>Menu Risol</h2>
+                    </div>
+                    <p>Pilih menu dan jumlah yang kamu inginkan.</p>
+                </div>
+                <div id="productList" class="product-grid"></div>
+            </section>
+
+            <section class="section checkout-section" id="checkout">
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">PESAN SEKARANG</p>
+                        <h2>Data Pemesanan</h2>
+                    </div>
+                </div>
+
+                <div class="checkout-grid">
+                    <form id="orderForm" class="panel">
+                        <label for="customerName">Nama pemesan</label>
+                        <input id="customerName" name="customerName"
+                               placeholder="Masukkan nama lengkap" required>
+
+                        <label for="phone">Nomor HP</label>
+                        <input id="phone" name="phone" type="tel"
+                               placeholder="Contoh: 081234567890" required>
+
+                        <label for="method">Metode penerimaan</label>
+                        <select id="method" name="method" required>
+                            <option value="delivery">Diantar</option>
+                            <option value="pickup">Ambil sendiri</option>
+                        </select>
+
+                        <div id="addressGroup">
+                            <label for="address">Alamat pengantaran</label>
+                            <textarea id="address" name="address"
+                                placeholder="Nama jalan, dusun, desa, dan patokan"></textarea>
+                        </div>
+
+                        <div id="pickupGroup" hidden>
+                            <label for="pickupTime">Waktu pengambilan</label>
+                            <input id="pickupTime" name="pickupTime"
+                                   type="datetime-local">
+                        </div>
+
+                        <label for="notes">Catatan (opsional)</label>
+                        <textarea id="notes" name="notes"
+                                  placeholder="Catatan untuk penjual"></textarea>
+
+                        <button type="submit" class="primary-button full">
+                            Buat Pesanan
+                        </button>
+                        <p class="small-note">
+                            Demo frontend: pesanan tersimpan sementara di browser.
+                        </p>
+                    </form>
+
+                    <aside class="panel">
+                        <h3>Ringkasan Keranjang</h3>
+                        <div id="cartItems">
+                            <p class="muted">Keranjang masih kosong.</p>
+                        </div>
+                        <div class="total-row">
+                            <span>Total belanja</span>
+                            <strong id="cartTotal">Rp0</strong>
+                        </div>
+                        <button id="clearCart" class="secondary-button full"
+                                type="button">Kosongkan Keranjang</button>
+                    </aside>
+                </div>
+            </section>
+        </section>
+
+        <!-- HALAMAN TESTIMONI -->
+        <section id="testimonials" class="page section">
+            <p class="eyebrow">CERITA PELANGGAN</p>
+            <h2>Testimoni Pelanggan</h2>
+            <p class="muted">
+                Testimoni demo dapat ditambahkan setelah pesanan selesai.
+            </p>
+            <div id="testimonialList" class="testimonial-grid"></div>
+
+            <form id="testimonialForm" class="panel testimonial-form">
+                <h3>Bagikan pengalamanmu</h3>
+                <label for="testimonialOrder">Pesanan selesai</label>
+                <select id="testimonialOrder" required>
+                    <option value="">Pilih pesanan yang selesai</option>
+                </select>
+                <label for="testimonialText">Testimoni</label>
+                <textarea id="testimonialText" required
+                          placeholder="Ceritakan pengalamanmu..."></textarea>
+                <button class="primary-button" type="submit">
+                    Kirim Testimoni
+                </button>
+            </form>
+        </section>
+
+        <!-- HALAMAN ADMIN DEMO -->
+        <section id="admin" class="page section">
+            <div id="adminLogin" class="panel login-panel">
+                <p class="eyebrow">AREA PENGELOLA</p>
+                <h2>Login Admin</h2>
+                <p class="muted">Demo tampilan, bukan autentikasi aman.</p>
+                <form id="loginForm">
+                    <label for="adminUser">Username</label>
+                    <input id="adminUser" required placeholder="Masukkan username">
+                    <label for="adminPassword">Password</label>
+                    <input id="adminPassword" type="password" required
+                           placeholder="Masukkan password">
+                    <button class="primary-button full" type="submit">
+                        Masuk
+                    </button>
+                    <p id="loginMessage" class="small-note"></p>
+                </form>
+            </div>
+
+            <div id="adminDashboard" hidden>
+                <div class="section-title">
+                    <div>
+                        <p class="eyebrow">PENGELOLA TOKO</p>
+                        <h2>Dashboard Admin</h2>
+                    </div>
+                    <button id="logoutButton" class="secondary-button">
+                        Keluar
+                    </button>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <p>Total pesanan</p>
+                        <strong id="orderStat">0</strong>
+                    </div>
+                    <div class="stat-card">
+                        <p>Jenis produk</p>
+                        <strong id="productStat">0</strong>
+                    </div>
+                    <div class="stat-card">
+                        <p>Testimoni</p>
+                        <strong id="testimonialStat">0</strong>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h3>Kelola Produk dan Stok</h3>
+                    <form id="productForm" class="product-form">
+                        <input id="newProductName" required
+                               placeholder="Nama produk">
+                        <input id="newProductPrice" type="number" min="1"
+                               required placeholder="Harga (Rp)">
+                        <input id="newProductStock" type="number" min="0"
+                               required placeholder="Stok">
+                        <button class="primary-button" type="submit">
+                            Tambah Produk
+                        </button>
+                    </form>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Produk</th>
+                                    <th>Harga</th>
+                                    <th>Stok</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminProductList"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h3>Pesanan Masuk</h3>
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Pemesan</th>
+                                    <th>Detail</th>
+                                    <th>Penerimaan</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Ubah status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="adminOrderList"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <h3>Testimoni Pelanggan</h3>
+                    <div id="adminTestimonialList"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Risol Ngrami — Platform Penjualan Risol</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
