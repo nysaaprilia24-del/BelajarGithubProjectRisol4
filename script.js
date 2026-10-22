@@ -576,3 +576,42 @@ renderCart();
 renderAdmin();
 renderTestimonials();
 updateTestimonialOptions();
+
+function pesanProduk(namaProduk, harga, idStok) {
+  const elemenStok = document.getElementById(idStok);
+  const stok = Number(elemenStok.textContent);
+
+  if (stok <= 0) {
+    alert("Maaf, stok " + namaProduk + " sudah habis.");
+    return;
+  }
+
+  const konfirmasi = confirm(
+    "Pesan " + namaProduk +
+    " seharga Rp" + harga.toLocaleString("id-ID") +
+    " per pcs?"
+  );
+
+  if (!konfirmasi) return;
+
+  elemenStok.textContent = stok - 1;
+
+  if (stok - 1 === 0) {
+    const tombol = elemenStok
+      .closest(".produk-info")
+      .querySelector(".tombol-pesan");
+
+    tombol.disabled = true;
+    tombol.textContent = "Stok Habis";
+
+    const label = elemenStok
+      .closest(".produk-card")
+      .querySelector(".label-stok");
+
+    label.textContent = "Stok habis";
+    label.style.background = "#eeeeee";
+    label.style.color = "#666666";
+  }
+
+  alert("Simulasi pemesanan " + namaProduk + " berhasil!");
+}

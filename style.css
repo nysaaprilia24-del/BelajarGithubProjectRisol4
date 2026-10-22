@@ -192,12 +192,20 @@ h3 {
 }
 
 .hero-art {
-    display: grid;
-    place-items: center;
-    min-height: 250px;
-    border-radius: 28px;
-    background: #f8dfc4;
-    font-size: clamp(100px, 18vw, 190px);
+    width: 100%;
+    max-width: 700px;
+    height: 400px;
+    margin: auto;
+    border-radius: 35px;
+    overflow: hidden;
+}
+
+.hero-art img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
 }
 
 /* Judul section */
@@ -702,4 +710,172 @@ footer {
         padding: 20px 5%;
         font-size: 12px;
     }
+    
+}
+]
+/* Katalog produk risol */
+.katalog {
+  padding: 60px 7%;
+  background: #fff8f5;
+  font-family: Arial, sans-serif;
+}
+
+.katalog-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.label-katalog {
+  color: #bd4b53;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.katalog-header h2 {
+  color: #542b2b;
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.katalog-header > p:last-child {
+  color: #806d6d;
+}
+
+.produk-container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.produk-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid #f1e4df;
+  box-shadow: 0 5px 18px rgba(84, 43, 43, 0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.produk-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(84, 43, 43, 0.12);
+}
+
+.produk-foto {
+  height: 220px;
+  position: relative;
+  background: #f8e9df;
+}
+
+.produk-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.label-stok {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #e3f4e5;
+  color: #286a38;
+  padding: 7px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.produk-info {
+  padding: 20px;
+}
+
+.produk-info h3 {
+  color: #542b2b;
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.deskripsi {
+  min-height: 40px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #806d6d;
+}
+
+.harga {
+  color: #bd3e49;
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.harga small {
+  font-size: 12px;
+  color: #806d6d;
+  font-weight: normal;
+}
+
+.stok {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.tombol-pesan {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #bd4b53;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tombol-pesan:hover {
+  background: #96363e;
+}
+
+.tombol-pesan:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+/* Tampilan HP dan tablet */
+@media (max-width: 768px) {
+  .produk-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+  }
+
+  .katalog {
+    padding: 40px 5%;
+  }
+
+  .katalog-header h2 {
+    font-size: 26px;
+  }
+
+  .produk-foto {
+    height: 170px;
+  }
+
+  .produk-info {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .produk-container {
+    grid-template-columns: 1fr;
+  }
+
+  .produk-foto {
+    height: 230px;
+  }
 }

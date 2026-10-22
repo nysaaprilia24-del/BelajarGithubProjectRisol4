@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risol Ngrami | Platform Penjualan Risol</title>
+    <title>RisolKu | Platform Penjualan Risol</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="navbar">
-        <a href="#" class="brand">Risol<span>Ngrami.</span></a>
+        <a href="#" class="brand">Risol<span>Ku.</span></a>
         <nav>
             <button class="nav-link active" data-page="shop">Beranda</button>
             <button class="nav-link" data-page="testimonials">Testimoni</button>
@@ -24,25 +24,79 @@
         <section id="shop" class="page active">
             <div class="hero">
                 <div>
-                    <p class="eyebrow">CAM﻿ILAN PILIHAN KELUARGA</p>
+                    <p class="eyebrow">CAMILAN PILIHAN KELUARGA</p>
                     <h1>Risol lezat untuk<br>teman setiap waktu.</h1>
                     <p>Temukan risol favoritmu, pesan dengan mudah,
                        lalu pilih diantar atau ambil sendiri.</p>
                     <a href="#catalog" class="primary-button">Lihat Menu</a>
                 </div>
-                <div class="hero-art">🥟</div>
+                <div class="hero-art">
+                <img src="c:\BelajarGithubProjectRisol4\images\risolku.jpeg" alt="Risol lezat">
+                </div>
+
             </div>
 
-            <section class="section" id="catalog">
-                <div class="section-title">
-                    <div>
-                        <p class="eyebrow">MENU HARI INI</p>
-                        <h2>Menu Risol</h2>
-                    </div>
-                    <p>Pilih menu dan jumlah yang kamu inginkan.</p>
-                </div>
-                <div id="productList" class="product-grid"></div>
-            </section>
+            <section class="katalog" id="menu">
+  <div class="katalog-header">
+    <p class="label-katalog">FRESH & DELICIOUS</p>
+    <h2>Menu Risol Favorit</h2>
+    <p>Pilih risol favoritmu, cocok untuk teman santai!</p>
+  </div>
+
+  <div class="produk-container">
+    <article class="produk-card">
+      <div class="produk-foto">
+        <img src="c:\BelajarGithubProjectRisol4\images\mayo.jpg" alt="Risol Mayo">
+        <span class="label-stok">Stok tersedia</span>
+      </div>
+      <div class="produk-info">
+        <h3>Risol Mayo</h3>
+        <p class="deskripsi">Risol gurih dengan isian mayo yang creamy.</p>
+        <p class="harga">Rp4.000 <small>/ pcs</small></p>
+        <p class="stok">Stok: <span id="stok-mayo">15</span> pcs</p>
+        <button class="tombol-pesan"
+          onclick="pesanProduk('Risol Mayo', 4000, 'stok-mayo')">
+          Pesan Sekarang
+        </button>
+      </div>
+    </article>
+
+    <article class="produk-card">
+      <div class="produk-foto">
+        <img src="c:\BelajarGithubProjectRisol4\images\risol cruncy.jpg" alt="Risol Sayur">
+        <span class="label-stok">Stok tersedia</span>
+      </div>
+      <div class="produk-info">
+        <h3>Risol Choco Cruncy</h3>
+        <p class="deskripsi">Isian coklat cruncy lumer dan keju chedar.</p>
+        <p class="harga">Rp4.000 <small>/ pcs</small></p>
+        <p class="stok">Stok: <span id="stok-sayur">20</span> pcs</p>
+        <button class="tombol-pesan"
+          onclick="pesanProduk('Risol Choco Cruncy', 4000, 'stok-sayur')">
+          Pesan Sekarang
+        </button>
+      </div>
+    </article>
+
+    <article class="produk-card">
+      <div class="produk-foto">
+        <img src="c:\BelajarGithubProjectRisol4\images\matcha.jpg" alt="Risol Matcha">
+        <span class="label-stok">Stok tersedia</span>
+      </div>
+      <div class="produk-info">
+        <h3>Risol Matcha</h3>
+        <p class="deskripsi">Risol dengan isian fla matcha dan parutan keju yang melimpah.</p>
+        <p class="harga">Rp4.0000 <small>/ pcs</small></p>
+        <p class="stok">Stok: <span id="stok-matcha">10</span> pcs</p>
+        <button class="tombol-pesan"
+          onclick="pesanProduk('Risol Matcha', 4000, 'stok-matcha')">
+          Pesan Sekarang
+        </button>
+      </div>
+    </article>
+  </div>
+</section>
+
 
             <section class="section checkout-section" id="checkout">
                 <div class="section-title">
@@ -233,7 +287,7 @@
     </main>
 
     <footer>
-        <p>© 2026 Risol Ngrami — Platform Penjualan Risol</p>
+        <p>© 2026 RisolKu — Platform Penjualan Risol</p>
     </footer>
 
     <script src="script.js"></script>
