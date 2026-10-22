@@ -95,6 +95,12 @@ CREATE TABLE `produk` (
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+INSERT INTO produk (nama_produk, harga, stok, foto, deskripsi)
+VALUES
+('Risol Mayo', 4000, 15, 'mayo.jpg', 'Risol isi mayo'),
+('Risol Choco Cruncy', 4000, 20, 'choco-cruncy.jpg', 'Risol cokelat crunchy'),
+('Risol Matcha', 4000, 10, 'matcha.jpg', 'Risol rasa matcha');
+
 -- --------------------------------------------------------
 
 --
