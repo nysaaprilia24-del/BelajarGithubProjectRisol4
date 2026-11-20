@@ -4,101 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RisolKu | Platform Penjualan Risol</title>
-    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../src/assets/style.css">
 </head>
 <body>
+
     <header class="navbar">
         <a href="#" class="brand">Risol<span>Ku.</span></a>
+
         <nav>
             <button class="nav-link active" data-page="shop">Beranda</button>
             <button class="nav-link" data-page="testimonials">Testimoni</button>
             <button class="nav-link" data-page="admin">Dashboard Admin</button>
         </nav>
+
         <button class="cart-button" id="showCart">
             Keranjang <span id="cartCount">0</span>
         </button>
     </header>
 
     <main>
+
         <!-- HALAMAN KONSUMEN -->
         <section id="shop" class="page active">
+
             <div class="hero">
                 <div>
                     <p class="eyebrow">CAMILAN PILIHAN KELUARGA</p>
                     <h1>Risol lezat untuk<br>teman setiap waktu.</h1>
-                    <p>Temukan risol favoritmu, pesan dengan mudah,
-                       lalu pilih diantar atau ambil sendiri.</p>
-                    <a href="#catalog" class="primary-button">Lihat Menu</a>
-                </div>
-                <div class="hero-art">
-                <img src=".\images\risolku.jpeg" alt="Risol lezat">
+                    <p>
+                        Temukan risol favoritmu, pesan dengan mudah,
+                        lalu pilih diantar atau ambil sendiri.
+                    </p>
+
+                    <a href="#menu" class="primary-button">Lihat Menu</a>
                 </div>
 
+                <div class="hero-art">
+                    <img src="../src/assets/risolku.jpeg" alt="Risol lezat">
+                </div>
             </div>
 
+            <!-- KATALOG PRODUK -->
             <section class="katalog" id="menu">
-  <div class="katalog-header">
-    <p class="label-katalog">FRESH & DELICIOUS</p>
-    <h2>Menu Risol Favorit</h2>
-    <p>Pilih risol favoritmu, cocok untuk teman santai!</p>
-  </div>
 
-  <div class="produk-container">
-    <article class="produk-card">
-      <div class="produk-foto">
-        <img src=".\images\mayo.jpg" alt="Risol Mayo">
-        <span class="label-stok">Stok tersedia</span>
-      </div>
-      <div class="produk-info">
-        <h3>Risol Mayo</h3>
-        <p class="deskripsi">Risol gurih dengan isian mayo yang creamy.</p>
-        <p class="harga">Rp4.000 <small>/ pcs</small></p>
-        <p class="stok">Stok: <span id="stok-mayo">15</span> pcs</p>
-        <button class="tombol-pesan"
-          onclick="pesanProduk('Risol Mayo', 4000, 'stok-mayo')">
-          Pesan Sekarang
-        </button>
-      </div>
-    </article>
+                <div class="katalog-header">
+                    <p class="label-katalog">FRESH & DELICIOUS</p>
+                    <h2>Menu Risol Favorit</h2>
+                    <p>Pilih risol favoritmu, cocok untuk teman santai!</p>
+                </div>
 
-    <article class="produk-card">
-      <div class="produk-foto">
-        <img src=".\images\risol cruncy.jpg" alt="Risol Cruncy">
-        <span class="label-stok">Stok tersedia</span>
-      </div>
-      <div class="produk-info">
-        <h3>Risol Choco Cruncy</h3>
-        <p class="deskripsi">Isian coklat cruncy lumer dan keju chedar.</p>
-        <p class="harga">Rp4.000 <small>/ pcs</small></p>
-        <p class="stok">Stok: <span id="stok-sayur">20</span> pcs</p>
-        <button class="tombol-pesan"
-          onclick="pesanProduk('Risol Choco Cruncy', 4000, 'stok-sayur')">
-          Pesan Sekarang
-        </button>
-      </div>
-    </article>
+                <div class="produk-container">
 
-    <article class="produk-card">
-      <div class="produk-foto">
-        <img src=".\images\matcha.jpg" alt="Risol Matcha">
-        <span class="label-stok">Stok tersedia</span>
-      </div>
-      <div class="produk-info">
-        <h3>Risol Matcha</h3>
-        <p class="deskripsi">Risol dengan isian fla matcha dan parutan keju yang melimpah.</p>
-        <p class="harga">Rp4.0000 <small>/ pcs</small></p>
-        <p class="stok">Stok: <span id="stok-matcha">10</span> pcs</p>
-        <button class="tombol-pesan"
-          onclick="pesanProduk('Risol Matcha', 4000, 'stok-matcha')">
-          Pesan Sekarang
-        </button>
-      </div>
-    </article>
-  </div>
-</section>
+                    <!-- PRODUK 1 -->
+                    <article class="produk-card">
+                        <div class="produk-foto">
+                            <img src="../src/assets/mayo.jpg" alt="Risol Mayo">
+                            <span class="label-stok">Stok tersedia</span>
+                        </div>
 
+                        <div class="produk-info">
+                            <h3>Risol Mayo</h3>
+                            <p class="deskripsi">
+                                Risol gurih dengan isian mayo yang creamy.
+                            </p>
+                            <p class="harga">Rp4.000 <small>/ pcs</small></p>
+                            <p class="stok">
+                                Stok: <span id="stok-mayo">15</span> pcs
+                            </p>
 
+                            <button class="tombol-pesan"
+                                onclick="pesanProduk('Risol Mayo', 4000, 'stok-mayo')">
+                                Pesan Sekarang
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- PRODUK 2 -->
+                    <article class="produk-card">
+                        <div class="produk-foto">
+                            <img src="../src/assets/risol cruncy.jpg" alt="Risol Choco Cruncy">
+                            <span class="label-stok">Stok tersedia</span>
+                        </div>
+
+                        <div class="produk-info">
+                            <h3>Risol Choco Cruncy</h3>
+                            <p class="deskripsi">
+                                Isian coklat cruncy lumer dan keju chedar.
+                            </p>
+                            <p class="harga">Rp4.000 <small>/ pcs</small></p>
+                            <p class="stok">
+                                Stok: <span id="stok-sayur">20</span> pcs
+                            </p>
+
+                            <button class="tombol-pesan"
+                                onclick="pesanProduk('Risol Choco Cruncy', 4000, 'stok-sayur')">
+                                Pesan Sekarang
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- PRODUK 3 -->
+                    <article class="produk-card">
+                        <div class="produk-foto">
+                            <img src="../src/assets/matcha.jpg" alt="Risol Matcha">
+                            <span class="label-stok">Stok tersedia</span>
+                        </div>
+
+                        <div class="produk-info">
+                            <h3>Risol Matcha</h3>
+                            <p class="deskripsi">
+                                Risol dengan isian fla matcha dan parutan keju yang melimpah.
+                            </p>
+                            <p class="harga">Rp4.000 <small>/ pcs</small></p>
+                            <p class="stok">
+                                Stok: <span id="stok-matcha">10</span> pcs
+                            </p>
+
+                            <button class="tombol-pesan"
+                                onclick="pesanProduk('Risol Matcha', 4000, 'stok-matcha')">
+                                Pesan Sekarang
+                            </button>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+            <!-- FORM PEMESANAN -->
             <section class="section checkout-section" id="checkout">
+
                 <div class="section-title">
                     <div>
                         <p class="eyebrow">PESAN SEKARANG</p>
@@ -107,14 +143,25 @@
                 </div>
 
                 <div class="checkout-grid">
+
                     <form id="orderForm" class="panel">
+
                         <label for="customerName">Nama pemesan</label>
-                        <input id="customerName" name="customerName"
-                               placeholder="Masukkan nama lengkap" required>
+                        <input
+                            id="customerName"
+                            name="customerName"
+                            placeholder="Masukkan nama lengkap"
+                            required
+                        >
 
                         <label for="phone">Nomor HP</label>
-                        <input id="phone" name="phone" type="tel"
-                               placeholder="Contoh: 081234567890" required>
+                        <input
+                            id="phone"
+                            name="phone"
+                            type="tel"
+                            placeholder="Contoh: 081234567890"
+                            required
+                        >
 
                         <label for="method">Metode penerimaan</label>
                         <select id="method" name="method" required>
@@ -122,128 +169,213 @@
                             <option value="pickup">Ambil sendiri</option>
                         </select>
 
+                        <!-- ALAMAT PENGANTARAN -->
                         <div id="addressGroup">
                             <label for="address">Alamat pengantaran</label>
-                            <textarea id="address" name="address"
-                                placeholder="Nama jalan, dusun, desa, dan patokan"></textarea>
+                            <textarea
+                                id="address"
+                                name="address"
+                                placeholder="Nama jalan, dusun, desa, dan patokan"
+                            ></textarea>
                         </div>
 
+                        <!-- WAKTU PENGAMBILAN -->
                         <div id="pickupGroup" hidden>
                             <label for="pickupTime">Waktu pengambilan</label>
-                            <input id="pickupTime" name="pickupTime"
-                                   type="datetime-local">
+                            <input
+                                id="pickupTime"
+                                name="pickupTime"
+                                type="datetime-local"
+                            >
                         </div>
 
                         <label for="notes">Catatan (opsional)</label>
-                        <textarea id="notes" name="notes"
-                                  placeholder="Catatan untuk penjual"></textarea>
+                        <textarea
+                            id="notes"
+                            name="notes"
+                            placeholder="Catatan untuk penjual"
+                        ></textarea>
 
                         <button type="submit" class="primary-button full">
                             Buat Pesanan
                         </button>
+
                         <p class="small-note">
                             Demo frontend: pesanan tersimpan sementara di browser.
                         </p>
+
                     </form>
 
+                    <!-- RINGKASAN KERANJANG -->
                     <aside class="panel">
                         <h3>Ringkasan Keranjang</h3>
+
                         <div id="cartItems">
                             <p class="muted">Keranjang masih kosong.</p>
                         </div>
+
                         <div class="total-row">
                             <span>Total belanja</span>
                             <strong id="cartTotal">Rp0</strong>
                         </div>
-                        <button id="clearCart" class="secondary-button full"
-                                type="button">Kosongkan Keranjang</button>
+
+                        <button
+                            id="clearCart"
+                            class="secondary-button full"
+                            type="button"
+                        >
+                            Kosongkan Keranjang
+                        </button>
                     </aside>
+
                 </div>
             </section>
+
         </section>
 
         <!-- HALAMAN TESTIMONI -->
         <section id="testimonials" class="page section">
+
             <p class="eyebrow">CERITA PELANGGAN</p>
             <h2>Testimoni Pelanggan</h2>
+
             <p class="muted">
                 Testimoni demo dapat ditambahkan setelah pesanan selesai.
             </p>
+
             <div id="testimonialList" class="testimonial-grid"></div>
 
             <form id="testimonialForm" class="panel testimonial-form">
+
                 <h3>Bagikan pengalamanmu</h3>
+
                 <label for="testimonialOrder">Pesanan selesai</label>
                 <select id="testimonialOrder" required>
                     <option value="">Pilih pesanan yang selesai</option>
                 </select>
+
                 <label for="testimonialText">Testimoni</label>
-                <textarea id="testimonialText" required
-                          placeholder="Ceritakan pengalamanmu..."></textarea>
+                <textarea
+                    id="testimonialText"
+                    required
+                    placeholder="Ceritakan pengalamanmu..."
+                ></textarea>
+
                 <button class="primary-button" type="submit">
                     Kirim Testimoni
                 </button>
+
             </form>
         </section>
 
-        <!-- HALAMAN ADMIN DEMO -->
+        <!-- HALAMAN ADMIN -->
         <section id="admin" class="page section">
+
+            <!-- LOGIN ADMIN -->
             <div id="adminLogin" class="panel login-panel">
+
                 <p class="eyebrow">AREA PENGELOLA</p>
                 <h2>Login Admin</h2>
-                <p class="muted">Demo tampilan, bukan autentikasi aman.</p>
+
+                <p class="muted">
+                    Demo tampilan, bukan autentikasi aman.
+                </p>
+
                 <form id="loginForm">
+
                     <label for="adminUser">Username</label>
-                    <input id="adminUser" required placeholder="Masukkan username">
+                    <input
+                        id="adminUser"
+                        required
+                        placeholder="Masukkan username"
+                    >
+
                     <label for="adminPassword">Password</label>
-                    <input id="adminPassword" type="password" required
-                           placeholder="Masukkan password">
+                    <input
+                        id="adminPassword"
+                        type="password"
+                        required
+                        placeholder="Masukkan password"
+                    >
+
                     <button class="primary-button full" type="submit">
                         Masuk
                     </button>
+
                     <p id="loginMessage" class="small-note"></p>
+
                 </form>
             </div>
 
+            <!-- DASHBOARD ADMIN -->
             <div id="adminDashboard" hidden>
+
                 <div class="section-title">
                     <div>
                         <p class="eyebrow">PENGELOLA TOKO</p>
                         <h2>Dashboard Admin</h2>
                     </div>
+
                     <button id="logoutButton" class="secondary-button">
                         Keluar
                     </button>
                 </div>
 
+                <!-- STATISTIK -->
                 <div class="stats-grid">
+
                     <div class="stat-card">
                         <p>Total pesanan</p>
                         <strong id="orderStat">0</strong>
                     </div>
+
                     <div class="stat-card">
                         <p>Jenis produk</p>
                         <strong id="productStat">0</strong>
                     </div>
+
                     <div class="stat-card">
                         <p>Testimoni</p>
                         <strong id="testimonialStat">0</strong>
                     </div>
+
                 </div>
 
+                <!-- MANAJEMEN PRODUK DAN STOK -->
                 <div class="panel">
+
                     <h3>Kelola Produk dan Stok</h3>
+
                     <form id="productForm" class="product-form">
-                        <input id="newProductName" required
-                               placeholder="Nama produk">
-                        <input id="newProductPrice" type="number" min="1"
-                               required placeholder="Harga (Rp)">
-                        <input id="newProductStock" type="number" min="0"
-                               required placeholder="Stok">
+
+                        <input
+                            id="newProductName"
+                            required
+                            placeholder="Nama produk"
+                        >
+
+                        <input
+                            id="newProductPrice"
+                            type="number"
+                            min="1"
+                            required
+                            placeholder="Harga (Rp)"
+                        >
+
+                        <input
+                            id="newProductStock"
+                            type="number"
+                            min="0"
+                            required
+                            placeholder="Stok"
+                        >
+
                         <button class="primary-button" type="submit">
                             Tambah Produk
                         </button>
+
                     </form>
+
                     <div class="table-wrap">
                         <table>
                             <thead>
@@ -254,13 +386,18 @@
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
+
                             <tbody id="adminProductList"></tbody>
                         </table>
                     </div>
+
                 </div>
 
+                <!-- MANAJEMEN PESANAN -->
                 <div class="panel">
+
                     <h3>Pesanan Masuk</h3>
+
                     <div class="table-wrap">
                         <table>
                             <thead>
@@ -273,23 +410,34 @@
                                     <th>Ubah status</th>
                                 </tr>
                             </thead>
+
                             <tbody id="adminOrderList"></tbody>
                         </table>
                     </div>
+
                 </div>
 
+                <!-- MANAJEMEN TESTIMONI -->
                 <div class="panel">
+
                     <h3>Testimoni Pelanggan</h3>
+
                     <div id="adminTestimonialList"></div>
+
                 </div>
+
             </div>
         </section>
+
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <p>© 2026 RisolKu — Platform Penjualan Risol</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- JAVASCRIPT -->
+    <script src="../src/assets/script.js"></script>
+
 </body>
 </html>
